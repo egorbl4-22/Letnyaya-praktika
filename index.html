@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Rating</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main>
+        <section id="all-airlines">
+            <h2>Рейтинг авиакомпаний</h2>
+            <div id="all-airlines-list"></div>
+        </section>
+        <section id="search-and-chart">
+            <div id="search-form">
+                <h2>Поиск перелетов</h2>
+                <form id="flight-search">
+                    <select id="from" name="from" required></select>
+                    <select id="to" name="to" required></select>
+                    <input type="date" id="date" name="date">
+                    <button type="submit">Поиск</button>
+                </form>
+            </div>
+            <div id="chart-section">
+                <h2>График частоты полетов</h2>
+                <select id="airline-select" multiple>
+                    <!-- Options will be added here -->
+                </select>
+                <button id="update-chart">Update Chart</button>
+                <canvas id="flight-frequency-chart"></canvas>
+            </div>
+        </section>
+        <section id="results">
+            <div id="airlines-list"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
